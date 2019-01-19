@@ -3,8 +3,8 @@
 > Phodal HUANG's macOS setup guide.
 
 1. Install Xcode
-2. Download Apps (WeChat, JetBrains Toolbox, Adobe Creative Cloud)
-3. Install Brews
+2. Download Apps (WeChat, [JetBrains Toolbox](https://www.jetbrains.com/toolbox/app/?fromMenu), [Adobe Creative Cloud](https://www.adobe.com/creativecloud/desktop-app.html))
+3. Install HomeBrew
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -99,3 +99,75 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ```
 brew install pandoc make
 ```
+
+## Git Config
+
+```
+git config --global user.email "h@phodal.com"
+git config --global user.name "Phodal HUANG"
+```
+
+
+Keychain Access for TWO-Factor
+
+Get Token: [Personal access tokens](https://github.com/settings/tokens)
+
+### GPG
+
+1. install tools
+
+```
+brew install gnupg pinentry-mac
+```
+
+2. create key
+
+```
+gpg --gen-key
+```
+
+```
+gpg --list-secret-keys --keyid-format LONG 
+```
+
+results
+
+```
+sec   rsa2048/5C3D8793775E8537 2019-01-19 [SC] [expires: 2021-01-18]
+      5BF2EA24922B8C14460552855C3D8793775E8537
+uid                 [ultimate] Phodal HUANG <h@phodal.com>
+ssb   rsa2048/4E30E78BB8B2E2E8 2019-01-19 [E] [expires: 2021-01-18]
+```
+
+3. config
+
+```
+git config --global user.signingkey 5C3D8793775E8537
+git config --global commit.gpgsign true
+```
+
+tools
+
+open ``~/.gnupg/gpg-agent.conf`` with:
+
+```
+pinentry-program /usr/local/bin/pinentry-mac
+```
+
+4. export 
+
+copy key:
+
+```
+gpg --armor --export 5C3D8793775E8537 | pbcopy
+```
+
+input:
+
+[GPG Keys](https://github.com/settings/keys)
+
+
+
+
+
+
