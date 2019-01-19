@@ -31,6 +31,16 @@ some tools
 brew install wget nvm gradle git-extras scrcpy coreutils gnu-sed  —with-default-names
 ```
 
+Daily
+
+```
+brew cask install neteasemusic sketch thunder firefox qq baiducloud
+```
+
+```
+brew cask install virtualbox shadowsocksx charles
+```
+
 ## NVM
 
 ```
@@ -58,6 +68,21 @@ chsh -s /bin/zsh
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+### Zsh AutoSuggestions
+
+1.clone
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+
+2.source
+
+```
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
 
 ## Emacs
 
@@ -90,6 +115,12 @@ brew cask install cheatsheet
 ```
 export ANDROID_HOME=/Users/fdhuang/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+```
+
+add in ``local.properties``
+
+```
+sdk.dir=/Users/fdhuang/Library/Android/sdk
 ```
 
 ## Markdown
@@ -167,7 +198,42 @@ input:
 [GPG Keys](https://github.com/settings/keys)
 
 
+## Image
 
+图片转换
+
+```
+brew install imagemagick gs
+```
+
+矢量
+
+```
+brew install potrace
+```
+
+## Docker
+
+```
+brew install kitematic
+```
+
+
+## Quicklook
+
+[Plugins](https://github.com/sindresorhus/quick-look-plugins)
+
+
+```
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+```
+
+## Cisco Scripts
+
+
+```
+brew install oath-toolkit
+```
 
 
 
