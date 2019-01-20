@@ -1,4 +1,4 @@
-# macOS Setup Guide for Frontend
+# 前端程序员的 macOS 搭建指南
 
 > Phodal HUANG's macOS setup guide.
 
@@ -138,6 +138,12 @@ git config --global user.email "h@phodal.com"
 git config --global user.name "Phodal HUANG"
 ```
 
+keychain
+
+```
+git config --global credential.helper osxkeychain
+```
+
 
 Keychain Access for TWO-Factor
 
@@ -210,6 +216,12 @@ brew install imagemagick gs
 
 ```
 brew install potrace
+```
+
+常用 
+
+```
+brew cask install xquartz inkscape gimp blender
 ```
 
 ## Docker
@@ -289,6 +301,18 @@ brew cask install visual-studio-code
 
 ```
 brew install elasticsearch
+```
+
+## ffmpeg
+
+```
+brew install ffmpeg --with-faac --with-libssh --with-libvorbis --with-libvpx --with-openssl --with-opus --with-theora --with-webp --with-x265
+```
+
+## postman
+
+```
+brew install postman
 ```
 
 
